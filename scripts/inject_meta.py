@@ -41,8 +41,9 @@ for filename in html_files:
     if filename == "index.html":
         og_type = "website"
         image_url = "assets/suno-ai.webp"
+        preload_tag = f'    <!-- LCP Image Preload -->\n    <link rel="preload" as="image" href="{image_url}">'
         meta_tags = adsense_code + "\n\n" + """    <!-- Google Search Console -->
-    <meta name="google-site-verification" content="71PlSlqtdaI7WUmF42mCcrYleUqsWwIPKIEyYzZid8c" />""" + "\n\n" + f"""    <!-- Open Graph / Facebook -->
+    <meta name="google-site-verification" content="71PlSlqtdaI7WUmF42mCcrYleUqsWwIPKIEyYzZid8c" />""" + "\n\n" + preload_tag + "\n\n" + f"""    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://harbr.co.in/">
     <meta property="og:title" content="{clean_title}">
@@ -68,7 +69,8 @@ for filename in html_files:
             date_match = re.search(r'<span>(July \d+, 2026)</span>', content)
         date = date_match.group(1) if date_match else "July 13, 2026"
         
-        meta_tags = adsense_code + "\n\n" + f"""    <!-- Open Graph / Facebook -->
+        preload_tag = f'    <!-- LCP Image Preload -->\n    <link rel="preload" as="image" href="{image_url}">'
+        meta_tags = adsense_code + "\n\n" + preload_tag + "\n\n" + f"""    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://harbr.co.in/{filename}">
     <meta property="og:title" content="{clean_title}">
