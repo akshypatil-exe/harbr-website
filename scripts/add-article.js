@@ -218,4 +218,13 @@ if (indexContent.includes(gridStartPattern)) {
     console.error(`Could not auto-insert card in index.html (grid container not found)`);
 }
 
+// Auto-update sitemap and robots.txt
+try {
+    const { execSync } = require('child_process');
+    execSync('python scripts/generate_sitemap.py');
+    console.log(`Updated sitemap.xml & robots.txt successfully!`);
+} catch (e) {
+    console.error(`Warning: Could not auto-run sitemap generator: ${e.message}`);
+}
+
 console.log(`Done! Article published successfully.`);
