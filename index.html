@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbr — Viral Tech & Gaming Trends</title>
+    <meta name="description" content="Explore the hottest viral trends in technology, artificial intelligence, gaming leaks, hardware rumors, and internet culture at Harbr.co.in.">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="app-shell">
+        <!-- 1. NEWS TICKER -->
+        <div class="ticker-wrap">
+            <div class="ticker-title">Trending Now</div>
+            <div class="ticker-content" id="ticker-content">
+                <div class="ticker-item">Suno AI v4 drops with breathtaking studio fidelity!</div>
+                <div class="ticker-item">Rockstar scrambles after massive GTA 6 dev-build leaks surface.</div>
+                <div class="ticker-item">New physics glitches in major MMO releases trigger item duplication.</div>
+                <div class="ticker-item">Nintendo Switch 2 price and launch line-up rumored at $399.</div>
+                <div class="ticker-item">AI Coding Agents write entire applications in seconds.</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="ticker-item">Suno AI v4 drops with breathtaking studio fidelity!</div>
+                <div class="ticker-item">Rockstar scrambles after massive GTA 6 dev-build leaks surface.</div>
+                <div class="ticker-item">New physics glitches in major MMO releases trigger item duplication.</div>
+                <div class="ticker-item">Nintendo Switch 2 price and launch line-up rumored at $399.</div>
+                <div class="ticker-item">AI Coding Agents write entire applications in seconds.</div>
+            </div>
+        </div>
+
+        <!-- 2. MAIN HEADER -->
+        <header class="main-header">
+            <div class="nav-container">
+                <a href="index.html" class="logo" id="logo-link">
+                    Harbr<span class="logo-accent">.co.in</span>
+                </a>
+                
+                <nav class="nav-links-wrap">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="#" class="category-filter-btn" data-category="AI">Artificial Intelligence</a></li>
+                        <li><a href="#" class="category-filter-btn" data-category="Gaming">Gaming</a></li>
+                        <li><a href="#" class="category-filter-btn" data-category="Hardware">Hardware</a></li>
+                        <li><a href="#" class="category-filter-btn" data-category="Software">Software</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="search-btn" id="search-open-btn" aria-label="Open search modal">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                    <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 3. PAGE MAIN CONTENT -->
+        <div class="main-wrapper">
+            <main class="content-area">
+                <!-- HERO SECTION (Featured Article) -->
+                <section class="hero-section" id="featured-section">
+                    <a href="suno-ai.html" class="featured-card" style="background-image: url('assets/suno-ai.webp');" id="hero-card">
+                        <span class="card-tag">Artificial Intelligence</span>
+                        <h2 class="featured-title">Suno AI v4: Generative Music Reaches Studio-Quality Realism</h2>
+                        <div class="featured-meta">
+                            <div class="meta-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>5 min read</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                <span>145K Views</span>
+                            </div>
+                            <span>• July 13, 2026</span>
+                        </div>
+                    </a>
+                </section>
+
+                <!-- GRID SECTION (Other Articles) -->
+                <section class="grid-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Trending Stories</h3>
+                    </div>
+                    
+                    <div class="articles-grid" id="articles-grid">
+                        <!-- Card 2: GTA 6 -->
+                        <article class="article-card" data-category="Gaming" id="card-gta">
+                            <a href="gta-6-leaks.html" class="card-img-wrap">
+                                <img src="assets/gta-6-leaks.webp" alt="GTA 6 Leaks Map" class="card-img">
+                            </a>
+                            <div class="card-body">
+                                <span class="card-tag">Gaming</span>
+                                <a href="gta-6-leaks.html">
+                                    <h4 class="card-title">GTA 6 Leaks: Source Code and Gameplay Details Surfacing Online</h4>
+                                </a>
+                                <p class="card-excerpt">A series of massive developer build leaks has Rockstar Games working around the clock to contain source code exposure.</p>
+                                <div class="card-footer">
+                                    <span>July 12, 2026</span>
+                                    <span>4 min read</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3: Gaming Bugs -->
+                        <article class="article-card" data-category="Gaming" id="card-bugs">
+                            <a href="gaming-bugs.html" class="card-img-wrap">
+                                <img src="assets/gaming-bugs.webp" alt="Glitched Video Game Scene" class="card-img">
+                            </a>
+                            <div class="card-body">
+                                <span class="card-tag">Gaming</span>
+                                <a href="gaming-bugs.html">
+                                    <h4 class="card-title">The Worst Gaming Bugs of 2026 That Broke the Internet</h4>
+                                </a>
+                                <p class="card-excerpt">From item duplication anomalies to gravity-defying physics engines, these are the glitches gamers exploited this month.</p>
+                                <div class="card-footer">
+                                    <span>July 11, 2026</span>
+                                    <span>3 min read</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4: Switch 2 -->
+                        <article class="article-card" data-category="Hardware" id="card-switch">
+                            <a href="switch-2.html" class="card-img-wrap">
+                                <img src="assets/switch-2.webp" alt="Next Gen Handheld Concept" class="card-img">
+                            </a>
+                            <div class="card-body">
+                                <span class="card-tag">Hardware</span>
+                                <a href="switch-2.html">
+                                    <h4 class="card-title">Nintendo Switch 2: Specs, Price, and Launch Title Rumors</h4>
+                                </a>
+                                <p class="card-excerpt">Industry analysts predict an Nvidia Tegra-powered hybrid console launching soon. Here is a breakdown of dev kit leaks.</p>
+                                <div class="card-footer">
+                                    <span>July 10, 2026</span>
+                                    <span>6 min read</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 5: AI Coding -->
+                        <article class="article-card" data-category="Software" id="card-coding">
+                            <a href="ai-coding.html" class="card-img-wrap">
+                                <img src="assets/ai-coding.webp" alt="AI Developer Interface" class="card-img">
+                            </a>
+                            <div class="card-body">
+                                <span class="card-tag violet">Software</span>
+                                <a href="ai-coding.html">
+                                    <h4 class="card-title">The Rise of Autonomous AI Coding Agents: Will Devs Be Obsolete?</h4>
+                                </a>
+                                <p class="card-excerpt">AI agents are coding large-scale systems autonomously. We explore what this means for junior developers entering the market.</p>
+                                <div class="card-footer">
+                                    <span>July 09, 2026</span>
+                                    <span>5 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <!-- 4. RIGHT SIDEBAR -->
+            <aside class="sidebar-area">
+                <!-- Tag Cloud Widget -->
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Hot Tags</h4>
+                    <div class="tags-cloud">
+                        <a href="#" class="tag-link" data-tag="Suno">#SunoAI</a>
+                        <a href="#" class="tag-link" data-tag="GTA">#GTA6</a>
+                        <a href="#" class="tag-link" data-tag="Nintendo">#Switch2</a>
+                        <a href="#" class="tag-link" data-tag="Glitches">#GamingBugs</a>
+                        <a href="#" class="tag-link" data-tag="AI">#GenerativeAI</a>
+                        <a href="#" class="tag-link" data-tag="Coding">#Devin</a>
+                        <a href="#" class="tag-link" data-tag="Rockstar">#RockstarGames</a>
+                    </div>
+                </div>
+
+                <!-- Live Reactions Widget -->
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Live Chat Reactions</h4>
+                    <div class="reactions-list" id="reactions-list">
+                        <div class="reaction-item">
+                            <div class="reaction-avatar">GG</div>
+                            <div class="reaction-content">
+                                <span class="reaction-user">GamerGuy99</span>
+                                <span class="reaction-text">Rockstar leaks are insane! I hope it doesn't delay the game though.</span>
+                            </div>
+                        </div>
+                        <div class="reaction-item">
+                            <div class="reaction-avatar">ML</div>
+                            <div class="reaction-content">
+                                <span class="reaction-user">MusicLover</span>
+                                <span class="reaction-text">Suno v4 vocals are literally indistinguishable from real recordings.</span>
+                            </div>
+                        </div>
+                        <div class="reaction-item">
+                            <div class="reaction-avatar">CD</div>
+                            <div class="reaction-content">
+                                <span class="reaction-user">CodeDryer</span>
+                                <span class="reaction-text">AI agents are cool but you still need human oversight to build anything complex.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="sidebar-widget newsletter-card">
+                    <h4 class="widget-title">Stay Updated</h4>
+                    <p class="newsletter-desc">Get the freshest viral tech and gaming reports delivered directly to your inbox weekly.</p>
+                    <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required id="newsletter-email">
+                        <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">Subscribe Now</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 5. SEARCH OVERLAY -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-modal">
+                <div class="search-input-wrap">
+                    <input type="text" placeholder="Search trends and articles..." class="search-bar-input" id="search-bar-input">
+                    <button class="search-close-btn" id="search-close-btn">Close</button>
+                </div>
+                <div class="search-results-list" id="search-results-list">
+                    <!-- Dynamic Search Results will output here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. FOOTER -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="logo">
+                        Harbr<span class="logo-accent">.co.in</span>
+                    </div>
+                    <p style="font-size: 13px; color: var(--color-text-muted); max-width: 400px;">
+                        The ultimate hub tracking the fastest-breaking viral events, generative AI breakthroughs, and gaming anomalies.
+                    </p>
+                </div>
+                <div class="footer-bottom">
+                    <span>&copy; 2026 Harbr.co.in. All rights reserved. Built autonomously.</span>
+                    <div style="display: flex; gap: var(--spacing-md);">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script connection -->
+    <script src="index.js"></script>
+</body>
+</html>
