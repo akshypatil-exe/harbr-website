@@ -34,10 +34,14 @@ for filename in html_files:
     
     clean_title = title.replace(" — Harbr", "").replace(" — Harbr.co.in", "")
     
+    adsense_code = """    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1650980062663955"
+         crossorigin="anonymous"></script>"""
+    
     if filename == "index.html":
         og_type = "website"
         image_url = "assets/suno-ai.webp"
-        meta_tags = f"""    <!-- Open Graph / Facebook -->
+        meta_tags = adsense_code + "\n\n" + f"""    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://harbr.co.in/">
     <meta property="og:title" content="{clean_title}">
@@ -63,7 +67,7 @@ for filename in html_files:
             date_match = re.search(r'<span>(July \d+, 2026)</span>', content)
         date = date_match.group(1) if date_match else "July 13, 2026"
         
-        meta_tags = f"""    <!-- Open Graph / Facebook -->
+        meta_tags = adsense_code + "\n\n" + f"""    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://harbr.co.in/{filename}">
     <meta property="og:title" content="{clean_title}">
