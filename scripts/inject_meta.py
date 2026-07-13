@@ -34,9 +34,25 @@ for filename in html_files:
     
     clean_title = title.replace(" — Harbr", "").replace(" — Harbr.co.in", "")
     
-    adsense_code = """    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1650980062663955"
-         crossorigin="anonymous"></script>"""
+    adsense_code = """    <!-- Google AdSense (Optimized Lazy Load) -->
+    <script>
+    (function() {
+        var adsenseLoaded = false;
+        function loadAdSense() {
+            if (adsenseLoaded) return;
+            adsenseLoaded = true;
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1650980062663955';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+        window.addEventListener('scroll', loadAdSense, { passive: true });
+        window.addEventListener('touchstart', loadAdSense, { passive: true });
+        window.addEventListener('mousemove', loadAdSense, { passive: true });
+        setTimeout(loadAdSense, 3500);
+    })();
+    </script>"""
     
     if filename == "index.html":
         og_type = "website"
