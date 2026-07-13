@@ -41,7 +41,8 @@ for filename in html_files:
     if filename == "index.html":
         og_type = "website"
         image_url = "assets/suno-ai.webp"
-        meta_tags = adsense_code + "\n\n" + f"""    <!-- Open Graph / Facebook -->
+        meta_tags = adsense_code + "\n\n" + """    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="71PlSlqtdaI7WUmF42mCcrYleUqsWwIPKIEyYzZid8c" />""" + "\n\n" + f"""    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://harbr.co.in/">
     <meta property="og:title" content="{clean_title}">
