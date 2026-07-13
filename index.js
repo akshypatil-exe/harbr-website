@@ -6,6 +6,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Article Data Model for client-side search
     const articles = [
         {
+            title: "Nintendo Switch 2 Launch Title Leaks: 8 Games Unveiled by European Publisher",
+            url: "switch-2-launch-titles-leak.html",
+            category: "Hardware",
+            excerpt: "A server leak from a major European game publisher has exposed 8 launch titles for the upcoming Nintendo Switch 2, including a new Mario Kart and Metroid Prime."
+        },
+        {
+            title: "OpenAI Sora 2 Open Beta: Text-to-Video Access Triggers 24-Hour Server Queues",
+            url: "sora-2-open-beta.html",
+            category: "AI",
+            excerpt: "OpenAI has unexpectedly launched the Sora 2 open beta, letting anyone generate photorealistic videos. Server loads have triggered queues exceeding 24 hours."
+        },
+        {
+            title: "Nintendo Switch 2 Launch Title Leaks: 8 Games Unveiled by European Publisher",
+            url: "switch-2-launch-titles-leak.html",
+            category: "Hardware",
+            excerpt: "A server leak from a major European game publisher has exposed 8 launch titles for the upcoming Nintendo Switch 2, including a new Mario Kart and Metroid Prime."
+        },
+        {
+            title: "OpenAI Sora 2 Open Beta: Text-to-Video Access Triggers 24-Hour Server Queues",
+            url: "sora-2-open-beta.html",
+            category: "AI",
+            excerpt: "OpenAI has unexpectedly launched the Sora 2 open beta, letting anyone generate photorealistic videos. Server loads have triggered queues exceeding 24 hours."
+        },
+        {
+            title: "Nintendo Switch 2 Launch Title Leaks: 8 Games Unveiled by European Publisher",
+            url: "switch-2-launch-titles-leak.html",
+            category: "Hardware",
+            excerpt: "A server leak from a major European game publisher has exposed 8 launch titles for the upcoming Nintendo Switch 2, including a new Mario Kart and Metroid Prime."
+        },
+        {
+            title: "OpenAI Sora 2 Open Beta: Text-to-Video Access Triggers 24-Hour Server Queues",
+            url: "sora-2-open-beta.html",
+            category: "AI",
+            excerpt: "OpenAI has unexpectedly launched the Sora 2 open beta, letting anyone generate photorealistic videos. Server loads have triggered queues exceeding 24 hours."
+        },
+        {
             title: "OpenAI Orion Leak: Real-Time Multimodal Search Integration Surfaces Online",
             url: "openai-orion-leak.html",
             category: "AI",
