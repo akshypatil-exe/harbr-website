@@ -6,6 +6,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Article Data Model for client-side search
     const articles = [
         {
+            title: "OpenAI Orion Leak: Real-Time Multimodal Search Integration Surfaces Online",
+            url: "openai-orion-leak.html",
+            category: "AI",
+            excerpt: "Leaked screenshots of OpenAI's upcoming model Orion reveal native, multi-tab real-time search synthesis."
+        },
+        {
+            title: "GTA 6 PC Confirmation: Rockstar Schedules Late 2026 Release",
+            url: "gta-6-pc-release.html",
+            category: "Gaming",
+            excerpt: "Rockstar Games officially confirms the GTA 6 PC release window, introducing advanced graphics features."
+        },
+        {
+            title: "Elden Ring Patch 1.15 Glitch: Modded Co-Op Saves Corrupting",
+            url: "elden-ring-patch-glitch.html",
+            category: "Gaming",
+            excerpt: "A critical glitch in the latest Elden Ring update is causing save file corruptions for modded players."
+        },
+        {
             title: "Suno AI v4: Generative Music Reaches Studio-Quality Realism",
             url: "suno-ai.html",
             category: "AI",
@@ -163,11 +181,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 6. Mobile navigation toggle drawer
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    if (mobileMenuBtn) {
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const drawerCloseBtn = document.getElementById('drawer-close-btn');
+    const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+    if (mobileMenuBtn && mobileDrawer) {
         mobileMenuBtn.addEventListener('click', () => {
-            alert('Mobile navigation toggled. Categories are available in the header menu bar.');
+            mobileDrawer.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Lock background scroll
         });
     }
+
+    const closeDrawer = () => {
+        if (mobileDrawer) {
+            mobileDrawer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+    if (drawerBackdrop) {
+        drawerBackdrop.addEventListener('click', closeDrawer);
+    }
+
+    // Close drawer when category filter is clicked (on mobile)
+    const drawerCategoryBtns = document.querySelectorAll('.mobile-drawer .category-filter-btn');
+    drawerCategoryBtns.forEach(btn => {
+        btn.addEventListener('click', closeDrawer);
+    });
 
     // 7. Dynamic Mock Live Reaction Feed
     const reactionsList = document.getElementById('reactions-list');

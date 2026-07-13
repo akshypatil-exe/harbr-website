@@ -820,6 +820,146 @@ button {
     color: var(--color-text-muted);
 }
 
+/* 9.5. Monetization Ad Slots */
+.ad-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18, 16, 23, 0.5);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    min-height: 90px;
+    position: relative;
+    overflow: hidden;
+    color: var(--color-text-dim);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition-fast);
+}
+
+.ad-slot::before {
+    content: 'Advertisement';
+    opacity: 0.6;
+}
+
+.ad-slot:hover {
+    border-color: var(--color-border-hover);
+    background-color: rgba(25, 23, 34, 0.6);
+}
+
+/* Sidebar Specific Ad Slot */
+.sidebar-area .ad-slot {
+    min-height: 250px;
+    margin: var(--spacing-lg) 0;
+}
+
+/* 9.6. Mobile Drawer Navigation */
+.mobile-drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    pointer-events: none;
+}
+
+.mobile-drawer.active {
+    display: block;
+    pointer-events: auto;
+}
+
+.drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(7, 6, 10, 0.8);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.mobile-drawer.active .drawer-backdrop {
+    opacity: 1;
+}
+
+.drawer-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 85%;
+    background-color: var(--color-bg);
+    border-left: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform var(--transition-smooth);
+}
+
+.mobile-drawer.active .drawer-content {
+    transform: translateX(0);
+}
+
+.drawer-header {
+    height: 64px;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.drawer-close {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    transition: var(--transition-fast);
+}
+
+.drawer-close:hover {
+    color: var(--color-text);
+    background-color: var(--color-card-bg);
+}
+
+.drawer-body {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.drawer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.drawer-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    padding: 8px 0;
+    display: block;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.drawer-links a:hover, .drawer-links a.active {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent-orange);
+}
+
 /* 10. Responsive Adjustments */
 @media (max-width: 900px) {
     .main-wrapper {
