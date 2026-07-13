@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Article Data Model for client-side search
     const articles = [
         {
+            title: "PS6 Specs Leak: Sony Next-Gen Console Leverages Custom AI Co-Processor for Native 8K 120FPS",
+            url: "ps6-specs-leak-ai-coprocessor.html",
+            category: "Hardware",
+            excerpt: "A massive supply-chain leak from Taiwan has exposed the core hardware layout of Sony's upcoming PlayStation 6, revealing an AMD Zen 6 APU and a dedicated AI upscaling NPU."
+        },
+        {
             title: "Nintendo Switch 2 Launch Title Leaks: 8 Games Unveiled by European Publisher",
             url: "switch-2-launch-titles-leak.html",
             category: "Hardware",
